@@ -7,6 +7,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Update TM Checking</title>
+
+<script src="/js/blockContent.js"></script>
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -52,40 +56,38 @@
                <div class="card-header">
              		 <h4 class="mb-0">Block Attendance Report</h4>
            	   </div>
-              <form class="form" action="/student/attendance" method="post">
-                <%-- <div class="form-group">
-                  <span class="error">${error}</span>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control form-control-lg rounded-0" name="studId" placeholder="Student Id">
-                </div> --%>
+                <form class="form">
+                <%--<form class="form" action="/student/attendance" method="post">--%>
+
        
                 <div class="form-group">
                 <label for="blocks">Block</label>
-			    <select name= "blocks">	
+			    <select name= "blocks" id="blocks">
 				  	<c:forEach var="block" items = "${blocks}">
 					    <option value="${block.id}" > ${block.description}</option>   
 			 	 	</c:forEach>
 			    </select>
 			     </div>
-                <button type="submit" class="btn btn-info btn-lg float-left" id="btnSearch">Search</button>
+                <button  class="btn btn-info btn-lg float-left" id="btnSearch">Search</button>
               </form>
                <hr>
-              	<div class="form-group">
-                <label for="total">Sessions in Block:</label>
-                <label name="total"> ${studentReports.sessions} </label>
-                </div>
-                <div class="form-group">
-                <label for="attended">Days Attended:</label>
-                <label name="attended"> ${studentReports.attended} </label>
-                </div>
-                <div class="form-group">
-                <label for="percentage">Percentage Attended:</label>
-                <label name="percentage"> ${studentReports.percentage} %</label>
-                </div>
-                <div class="form-group">
-                <label for="percentage">Extra Credit Points:</label>
-                <label name="percentage"> ${studentReports.creditScore}</label>
+                <div id="ajaxId">
+                <%--<div class="form-group">--%>
+                <%--<label for="total">Sessions in Block:</label>--%>
+                <%--<label name="total"> ${studentReports.sessions} </label>--%>
+                <%--</div>--%>
+                <%--<div class="form-group">--%>
+                <%--<label for="attended">Days Attended:</label>--%>
+                <%--<label name="attended"> ${studentReports.attended} </label>--%>
+                <%--</div>--%>
+                <%--<div class="form-group">--%>
+                <%--<label for="percentage">Percentage Attended:</label>--%>
+                <%--<label name="percentage"> ${studentReports.percentage} %</label>--%>
+                <%--</div>--%>
+                <%--<div class="form-group">--%>
+                <%--<label for="percentage">Extra Credit Points:</label>--%>
+                <%--<label name="percentage"> ${studentReports.creditScore}</label>--%>
+                <%--</div>--%>
                 </div>
             </div>
             <!--/card-block-->

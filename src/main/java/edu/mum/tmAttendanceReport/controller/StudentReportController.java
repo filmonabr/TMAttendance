@@ -8,10 +8,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import edu.mum.tmAttendanceReport.dto.SingleStudentReport;
 import edu.mum.tmAttendanceReport.entity.Block;
@@ -86,31 +83,49 @@ public class StudentReportController {
 		List<TMAttendance> totalAttendedSessions = tmAttendanceService
 				.findTotalAttendance(student.getStudentId(), entryStartDate);
 		
-		double percentage = (double) (totalAttendedSessions.size() / dateList.size()) * 100;
+		double percentage =  ((double)totalAttendedSessions.size() / dateList.size()) * 100;
+		Long a=Math.round(percentage);
 
 		model.addAttribute("totalSessions", dateList.size());
 		model.addAttribute("totalSessionsAttended", totalAttendedSessions.size());
-		model.addAttribute("percentage", percentage);
+		model.addAttribute("percentage", a);
 		model.addAttribute("blocks", blockList);
 		
 		return "studentReport";
 	}
-	
-	@PostMapping(value = "/attendance")
-	public String blockAttendance(@RequestParam("blocks") Long blockId, Model model, HttpSession session) {
+
+//	@PostMapping(value = "/attendance")
+//	public String blockAttendance(@RequestParam("blocks") Long blockId, Model model,HttpSession session) {
+//		Block block = blockService.findById(blockId);
+//		System.out.println(block);
+//
+//		Student student = (Student) session.getAttribute("currentStudent");
+//
+//		if(block!=null) {
+//			SingleStudentReport studentReports = generateResult(student, block);
+//			model.addAttribute("studentReports",studentReports);
+//		}
+//
+//		return "redirect:/student/attendance";
+//	}
+
+	@PostMapping(value = "/attendanceReport")
+	public @ResponseBody SingleStudentReport blockAttendance(@RequestBody Long blockId, Model model, HttpSession session) {
 		Block block = blockService.findById(blockId);
-		System.out.println(block);
-		
+		SingleStudentReport studentReports = null;
+
+		System.out.println("INSIDE AJAX CALL HANDLER");
+
 		Student student = (Student) session.getAttribute("currentStudent");
-		
+
 		if(block!=null) {
-			SingleStudentReport studentReports = generateResult(student, block);
+			 studentReports = generateResult(student, block);
 			model.addAttribute("studentReports",studentReports);
 		}
 
-		return "redirect:/student/attendance";
+		return studentReports;
 	}
-	
+
 
 
 	public SingleStudentReport generateResult(Student student, Block block) {

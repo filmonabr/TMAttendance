@@ -20,6 +20,8 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<%--<script src="/js/blockContent.js"></script>--%>
+
 </head>
 <body>
 	<div id="body-container">
@@ -27,16 +29,20 @@
 		<!-- Begin header -->
 		<div id="header">
 			<!-- navBar menu -->
-			<nav class="navbar navbar-inverse">
+			<nav class="navbar navbar-default navbar-static-top" style="background-color: cyan">
 				<div class="container">
+
+
 					<div class="container">
 						<div class="container">
-							<div class="container">
-								<div class="navbar-header">
-									<a class="navbar-brand" href="#">TM Attendance</a>
+							<div class="container" >
+								<div class="navbar-header pull-left">
+
+										<img src="/image/meditation.jpg"
+											 height="50" width="50">
 								</div>
 								<ul class="nav navbar-nav">
-									<li class="active"><a href="#">Home</a></li>
+									<li class="active"><a href="/home">Home</a></li>
 									<li class="dropdown"><a class="dropdown-toggle"
 										data-toggle="dropdown" href="#">TM Report<span
 											class="caret"></span></a>
@@ -47,10 +53,7 @@
 												<li><a href="/faculty/entry">Entry</a></li>
 											</security:authorize>
 
-										<%-- <security:authorize access="hasAnyRole('ADMIN', 'FACULTY')">
-											<li><a href="#">Block</a></li>
-											<li><a href="#">Entry</a></li>
-										</security:authorize> --%>
+
 										
 										<security:authorize access="hasRole('STUDENT')">
 											<li><a href="/student/attendance">TM Attendance</a></li>

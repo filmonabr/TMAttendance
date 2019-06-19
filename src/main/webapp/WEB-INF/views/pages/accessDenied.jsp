@@ -11,7 +11,7 @@
 
 <h3>${msg}</h3>
 <!-- <img src="../../../images/accessdenied.png" > -->
-<img src="<c:url value="/WEB-INF/images/accessdenied.png" />" alt="Access Denied Image"  />
+<img src="/image/accessdenied.png"  alt="Access Denied Image"  />
 
 </body>
 </html>

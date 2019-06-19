@@ -26,4 +26,5 @@ public interface TMAttendanceRepository extends CrudRepository<TMAttendance, TMA
 	@Query(value = "SELECT t FROM TMAttendance t WHERE t.tmAttendanceIdentity.studentId.studentId=:studentid AND t.tmAttendanceIdentity.date.date >= :date ")
 	public List<TMAttendance> findAttendanceById(@Param("studentid")Long studentid,@Param("date")Date date);
 
+
 }

@@ -13,7 +13,7 @@ import edu.mum.tmAttendanceReport.controller.AdminController;
 import edu.mum.tmAttendanceReport.data.LoadData;
 
 @SpringBootApplication
-@ComponentScan("edu.mum.tmAttendanceReport")
+//@ComponentScan("edu.mum.tmAttendanceReport")
 public class TmAttendanceReportApplication {
 
 	public static void main(String[] args) {
