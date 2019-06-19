@@ -6,7 +6,6 @@
 <%@ taglib prefix="security"
 	uri="http://www.springframework.org/security/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"  href="../../css/main.css">
+<link rel="stylesheet" href="../../../css/main.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script
@@ -28,7 +27,7 @@
 		<!-- Begin header -->
 		<div id="header">
 			<!-- navBar menu -->
-			<nav class="navbar navbar-inverse bg-light">
+			<nav class="navbar navbar-inverse">
 				<div class="container">
 					<div class="container">
 						<div class="container">
@@ -119,7 +118,7 @@
 				<div class="container">
 					<div class="ooter-copyright  py-3 text-white bg-dark">
 						<p class="text-muted">
-							© 2019 Copyright: <a href="#"> www.mum.edu</a>
+							© 2019 Copyright: <a href="#"> tmattendance.mum.edu</a>
 						</p>
 					</div>
 				</div>

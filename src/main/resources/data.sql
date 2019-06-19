@@ -91,6 +91,7 @@ INSERT INTO `role` VALUES (3,'ROLE_STUDENT');
 
 
 -- Authentication credentials
+
 INSERT INTO `users`(user_id, active, email, password) VALUES (1, 1, 'dmebrahtu@mum.edu', '$2a$10$S/wlXEo/APzf.Sn1cO2p4.V12EJmaw.uzrHelMvkpuahjmHWnSafe');
 INSERT INTO `users`(user_id, active, email, password) VALUES (2, 1, 'jndamutsa@mum.edu', '$2a$10$S/wlXEo/APzf.Sn1cO2p4.V12EJmaw.uzrHelMvkpuahjmHWnSafe');
 INSERT INTO `users`(user_id, active, email, password) VALUES (3, 1, 'ngoitom@mum.edu', '$2a$10$S/wlXEo/APzf.Sn1cO2p4.V12EJmaw.uzrHelMvkpuahjmHWnSafe');
