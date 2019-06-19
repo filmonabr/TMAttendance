@@ -5,7 +5,7 @@
 <html>
 <head>
 <title>Add Employee Form</title>
-<link rel="stylesheet" href="../../css/main.css">
+<link rel="stylesheet" href="../../../css/main.css">
 </head>
 <body style="background: aliceblue">
 	<header>

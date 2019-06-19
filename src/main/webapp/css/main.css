@@ -1,5 +1,24 @@
 
 html,
+#login{
+    padding-top:50px;
+    /*background-color: #EFEFEF;*/
+    background-color:lightseagreen;
+
+}
+.login {
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(bottom,rgba(50,50,50,0),rgba(50,50,50,1)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(top,rgba(50,50,50,0),rgba(50,50,50,1)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(top,rgba(50,50,50,0),rgba(50,50,50,1)); /*Fx 3.6-15*/
+    background: linear-gradient(to top, rgba(50,50,50,0), rgba(50,50,50,1)); /*Standard*/
+
+    /*box-shadow: 0 8px 15px 0 rgba(0, 0, 10, 0.2), 0 6px 20px 0 rgba(0, 0, 10, 0.19);*/
+    box-shadow:-10px 10px 5px grey;
+    color: #b3ff1a;
+    font-size: 18px;
+}
+
 body {
    margin:0;
    padding:0;

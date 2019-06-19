@@ -7,7 +7,7 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <script src="../../js/ajax.js"></script>
-	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../../css/main.css">
 </head>
 <body style="background: aliceblue">
 
