@@ -7,20 +7,21 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <script src="../../js/ajax.js"></script>
+	<link rel="stylesheet" href="../../css/main.css">
 </head>
-<body>
+<body style="background: aliceblue">
 
 
 
-	<div class="container">
-		<h2>TM Attendance per Block Report</h2>
+	<div class="container" style="background: aliceblue">
+		<h2>TM morning group meditation attendance per Block Report</h2>
 		<h3>Course: <c:out value="${courseName}" /></h3>
 		<h3>Block: <c:out value="${blockDescription}" /></h3>
 
 		<a href="/faculty/report/block"><input type="button"
 			value="return to previous" /></a>
 
-		<table class="table">
+		<table class="table" style="background: aliceblue">
 			<thead>
 				<tr>
 					<th>ID</th>
@@ -31,7 +32,7 @@
 					<th></th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody style="background: aliceblue">
 				<c:forEach items="${studentReports}" var="studentReport">
 					<tr class="active">
 						<td><c:out value="${studentReport.id}" /></td>

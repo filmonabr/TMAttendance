@@ -5,12 +5,12 @@
 <html>
 <head>
 <title>Add Employee Form</title>
-<link rel="stylesheet" href="../../css/index.css">
+<link rel="stylesheet" href="../../css/main.css">
 </head>
-<body>
+<body style="background: aliceblue">
 	<header>
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
+		<nav class="navbar navbar-default " style="background: aliceblue">
+			<div class="container-fluid" >
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed"
@@ -23,12 +23,24 @@
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="container">
-					<h2>Choose:</h2>
-					<p>The form below contains two dropdown menus (select lists):</p>
+				<div class="container" >
+					<h3>Please select select the block and the course to view the students who attend the meditation for that particular block and course:</h3>
 					<br> <br> <br>
 					<div class="form-group">
-						<form action="/faculty/report/block" method="post">
+						<form action="/faculty/report/block" method="post" >
+
+							<div class="container">
+								<div class="container">
+									<div class="container">
+										Block: <select name="block" class="form-control">
+										<c:forEach items="${bList}" var="block">
+											<option value="${block.id}">${block.description}</option>
+										</c:forEach>
+									</select>
+									</div>
+								</div>
+							</div>
+							<br> <br> <br>
 							<div class="container">
 								<div class="container">
 									<div class="container">
@@ -40,18 +52,7 @@
 									</div>
 								</div>
 							</div>
-							<br> <br> <br>
-							<div class="container">
-								<div class="container">
-									<div class="container">
-										Block: <select name="block" class="form-control">
-											<c:forEach items="${bList}" var="block">
-												<option value="${block.id}">${block.description}</option>
-											</c:forEach>
-										</select>
-									</div>
-								</div>
-							</div>
+
 							<br> <br> <br>
 							<div class="container">
 								<div class="container">

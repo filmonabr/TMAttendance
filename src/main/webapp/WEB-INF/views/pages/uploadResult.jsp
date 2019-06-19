@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-      <h1> File uploaded successfully!!!!</h1>
+<body style="background: aliceblue">
+      <h1> File uploaded successfully well done!!!!</h1>
 </body>
 </html>

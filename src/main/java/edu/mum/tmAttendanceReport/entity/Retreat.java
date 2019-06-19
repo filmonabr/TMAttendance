@@ -1,6 +1,10 @@
 package edu.mum.tmAttendanceReport.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -27,15 +31,17 @@ public class Retreat implements Serializable{
 	@OneToOne
 	@JoinColumn(name="student_id")
 	private Student studentid;
-	
-	private Integer numberOfRetreats;
+
+	@DateTimeFormat//(pattern = "MM-dd-yyyy")
+	private Date retreatDate;
+
 	
 	public Retreat() {}
 
-	public Retreat(Long id, Student studentid, Integer numberOfRetreats) {
+	public Retreat(Long id, Student studentid, Date retreatDate) {
 		this.id = id;
 		this.studentid = studentid;
-		this.numberOfRetreats = numberOfRetreats;
+		this.retreatDate = retreatDate;
 	}
 
 	public Long getId() {
@@ -54,17 +60,17 @@ public class Retreat implements Serializable{
 		this.studentid = studentid;
 	}
 
-	public Integer getNumberOfRetreats() {
-		return numberOfRetreats;
+	public Date getNumberOfRetreats() {
+		return retreatDate;
 	}
 
-	public void setNumberOfRetreats(Integer numberOfRetreats) {
-		this.numberOfRetreats = numberOfRetreats;
+	public void setNumberOfRetreats(Date retreatDate) {
+		this.retreatDate = retreatDate;
 	}
 
 	@Override
 	public String toString() {
-		return "Retreat [id=" + id + ", studentid=" + studentid + ", numberOfRetreats=" + numberOfRetreats + "]";
+		return "Retreat [id=" + id + ", studentid=" + studentid + ", retreatDate=" + retreatDate + "]";
 	}
 	
 	

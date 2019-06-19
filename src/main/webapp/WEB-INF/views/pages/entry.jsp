@@ -7,11 +7,11 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body style="background: aliceblue">
 
 
-<div class="container">
-		<h2>TM Attendance Report per Entry</h2>
+<div class="container" style="background: aliceblue">
+		<h2>TM morning group meditation attendance Report per Entry</h2>
 		<h3>Entry: <c:out value="${description}" /></h3>
 		
 
@@ -31,14 +31,14 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach items="${studententrylist}" var="studentEntry">
+				<c:forEach items="${studententrylist}" var="studEntry">
 					<tr class="active">
-						<td><c:out value="${studentEntry.id}" /></td>
-						<td><c:out value="${studentEntry.firstname}" /></td>
-						<td><c:out value="${studentEntry.lastname}" /></td>
-						<td><c:out value="${studentEntry.possibleSession}" /></td>
-						<td><c:out value="${studentEntry.totalSessionAttended}" /></td>
-						<td><c:out value="${studentEntry.percentage}" />%</td>
+						<td><c:out value="${studEntry.id}" /></td>
+						<td><c:out value="${studEntry.firstname}" /></td>
+						<td><c:out value="${studEntry.lastname}" /></td>
+						<td><c:out value="${studEntry.possibleSession}" /></td>
+						<td><c:out value="${studEntry.totalSessionAttended}" /></td>
+						<td><c:out value="${studEntry.percentage}" />%</td>
 					</tr>
 				</c:forEach>
 			</tbody>

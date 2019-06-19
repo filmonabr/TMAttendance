@@ -6,32 +6,39 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Home</title>
 </head>
-<body>
+<body style="background: aliceblue">
     
     <div class="col-md-12 text-center mt-5">
-    <h1 class="brand-heading">TM Attendance</h1>
+    <h1 class="brand-heading">Welcome to: </h1>
     <span *ngIf="!isLoggedIn()">
-      <p class="intro-text">TM attendance management web app </p>
+      <h3 class="intro-text">TM attendance management System</h3>
+
+
+
     </span>
 </div>
 <div class="col-md-12 text-center mt-5">
-    <div class="col-md-6 text-center float-left mt-2">
-      <h1 class="brand-heading">TM Attendance</h1>
-      <p> Track students TM attendance</p>
-      <h1 class="brand-heading">TM Checking</h1>
-      <p> CRUD operations</p>
-      <h1 class="brand-heading">Retreat</h1>
-      <p> CRUD operations</p>
-    </div>
-    
-      <div class="col-md-6 text-center float-left mt-2">
-      <h1 class="brand-heading">TM Attendance Report</h1>
-      <p> Block and entry reports </p>
-      <h1 class="brand-heading">TM Checking Report</h1>
-      <p> Individual student report </p>
-      <h1 class="brand-heading">Retreat Report</h1>
-      <p> Individual student report </p>
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 </body>
 </html>

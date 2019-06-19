@@ -16,13 +16,13 @@
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body>
+<body style="background: aliceblue">
  
  
  <div class="container py-5">
   <div class="row">
     <div class="col-md-12">
-      <h2 class="text-center text-white mb-4">Login Form</h2>
+
       <div class="row">
         <div class="col-md-6 mx-auto">
 

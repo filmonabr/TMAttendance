@@ -7,10 +7,10 @@
 <meta charset="UTF-8">
 <title>TM Checking</title>
 </head>
-<body>
+<body style="background: aliceblue">
 	
 		<div class="card-header">
-           <h3 class="mb-0">Add TM Checking Attendance</h3>
+           <h3 class="mb-0">Add TM checking attendance to the selected student: </h3>
         </div>
         
 		<form:form modelAttribute="check"  method="post">

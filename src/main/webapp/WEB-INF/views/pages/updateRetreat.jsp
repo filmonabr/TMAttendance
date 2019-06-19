@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>Update Retreat</title>
 </head>
-<body>
+<body style="background: aliceblue">
 
   <div class="row">
     <div class="col-md-12">
@@ -41,7 +41,7 @@
                   <form:input type="text" class="form-control form-control-lg rounded-0" path="studentid.studentId" placeholder="Student Id" readonly="true" />
                 </div>
                 <div class="form-group">
-                  <form:input type="text" class="form-control form-control-lg rounded-0" path="numberOfRetreats" placeholder="Number of Retreats" />
+                  <form:input type="text" class="form-control form-control-lg rounded-0" path="numberOfRetreats" placeholder="Retreat date" />
                 </div>
                 <button type="submit" class="btn btn-info btn-lg float-left" id="btnUpdate">Update</button>
               </form:form>

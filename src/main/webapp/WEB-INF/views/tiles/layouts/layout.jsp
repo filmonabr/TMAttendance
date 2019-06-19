@@ -6,6 +6,7 @@
 <%@ taglib prefix="security"
 	uri="http://www.springframework.org/security/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +14,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../../../css/main.css">
+<link rel="stylesheet"  href="../../css/main.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script
@@ -27,16 +28,16 @@
 		<!-- Begin header -->
 		<div id="header">
 			<!-- navBar menu -->
-			<nav class="navbar navbar-inverse">
+			<nav class="navbar navbar-inverse bg-light">
 				<div class="container">
 					<div class="container">
 						<div class="container">
 							<div class="container">
 								<div class="navbar-header">
-									<a class="navbar-brand" href="#">TM Attendance</a>
+									<a class="navbar-brand" href="#"></a>
 								</div>
 								<ul class="nav navbar-nav">
-									<li class="active"><a href="#">Home</a></li>
+									<li class="active"><a href="/home">Home</a></li>
 									<li class="dropdown"><a class="dropdown-toggle"
 										data-toggle="dropdown" href="#">TM Report<span
 											class="caret"></span></a>
@@ -118,7 +119,7 @@
 				<div class="container">
 					<div class="ooter-copyright  py-3 text-white bg-dark">
 						<p class="text-muted">
-							© 2019 Copyright: <a href="#"> tmattendance.mum.edu</a>
+							© 2019 Copyright: <a href="#"> www.mum.edu</a>
 						</p>
 					</div>
 				</div>

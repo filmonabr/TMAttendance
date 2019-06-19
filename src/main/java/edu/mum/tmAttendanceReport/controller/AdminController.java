@@ -4,15 +4,17 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import edu.mum.tmAttendanceReport.dto.FileUploadInfo;
@@ -53,9 +55,11 @@ public class AdminController {
 
 		Path fileNameAndPath = Paths.get(uploadingDir, file.getOriginalFilename());
         	try {
+				System.out.println("INSIDE UPLOAD CATCH");
 				Files.write(fileNameAndPath, file.getBytes());
 				return "uploadResult";
 			} catch (IOException e) {
+				//System.out.println("INSIDE UPLOAD CATCH");
 				e.printStackTrace();
 				return "fileNotFound";
 			}
@@ -63,12 +67,13 @@ public class AdminController {
 	
 	@GetMapping(value="/retreat")
 	public String retreatForm(@ModelAttribute("retreat") Retreat retreat) {
+
 		return "addRetreatForm";
 	}
 	
 	@PostMapping(value="/retreat")
 	public String saveRetreat(@ModelAttribute("retreat") Retreat retreat) {
-		System.out.println(retreat);
+		//System.out.println(retreat);
 		Student student = studentService.findById(retreat.getStudentid().getStudentId());
 		retreat.setStudentid(student);
 		Retreat newRetreat = retreatService.save(retreat);
@@ -151,6 +156,11 @@ public class AdminController {
 		model.addAttribute("found", false);
 		return "redirect:/admin/check/update";
 	}
-	
-	
+
+	@InitBinder
+	public void initBinder(WebDataBinder binder) {
+		SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy");
+		sdf.setLenient(true);
+		binder.registerCustomEditor(LocalDate.class, new CustomDateEditor(sdf, true));
+	}
 }

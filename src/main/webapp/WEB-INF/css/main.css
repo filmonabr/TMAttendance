@@ -13,7 +13,7 @@ body {
    height:100%;
 }
 #header {
-   background:#ff0;
+   background:deepskyblue;
    padding:10px;
 }
 
@@ -44,7 +44,7 @@ body {
     /* Set gray background color and 100% height */
     .sidenav {
       padding-top: 20px;
-      background-color: #f1f1f1;
+      background-color: deepskyblue;
       height: 100%;
     }
     
@@ -54,7 +54,7 @@ body {
       color: white;
       padding: 15px;
     } */
-     */
+
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
       .sidenav {
@@ -72,3 +72,7 @@ body {
    background:#6cf;
 } 
 
+   .my-color{
+
+       background-color: #66ccff;
+   }

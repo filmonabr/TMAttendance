@@ -43,7 +43,7 @@ public class EntryController {
 	{
 		List<Entry> entryList= entryService.findAll();
 		System.out.println(entryList);
-		model.addAttribute("eList", entryList);
+		model.addAttribute("entryList", entryList);
 		
 	return "entryForm";
 	}
@@ -103,10 +103,10 @@ public class EntryController {
 	redirect.addFlashAttribute("description",description );
 	
 
-			return "redirect:/faculty/entry/viewEntryList" ;
+			return "redirect:/faculty/entry/viewStudeEntryList" ;
 	}
 	
-	@GetMapping(value="/entry/viewEntryList")
+	@GetMapping(value="/entry/viewStudeEntryList")
 	public String showStudentbyEntrylist(Model model)
 	{
 		return "entry";

@@ -418,6 +418,8 @@ INSERT INTO `course`(code, name) VALUES('CS472', 'Web Application Program');
 
 -- Course offered in each block info
 INSERT INTO `course_offered`(block_id, course_id, faculty_id) VALUES(1, 'CS545', 2);
+INSERT INTO `course_offered`(block_id, course_id, faculty_id) VALUES(2, 'CS572', 2);
+INSERT INTO `course_offered`(block_id, course_id, faculty_id) VALUES(3, 'CS472', 2);
 
 
 -- Course offered in each block and students enrolled in the course info
@@ -428,6 +430,8 @@ INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_co
 INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987071);
 INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987072);
 INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987073);
+
+
 
 -- TM attendance locations
 INSERT INTO `place`(id, name) VALUES(1, 'DB');
@@ -489,7 +493,8 @@ INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987
 INSERT INTO `tmcheck`(id, student_id, number_of_checks) VALUES(1, 987073, 2);
 
 -- Students Retreat record
-INSERT INTO `retreat`(id, student_id, number_of_retreats) VALUES(1, 987073, 1);
+INSERT INTO `retreat`(id, student_id, retreat_date) VALUES(1, 987073, '2017-02-01');
+
 
 
 

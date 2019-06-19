@@ -5,13 +5,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Entry report form</title>
 </head>
-<body>
+<body style="background: aliceblue">
 
 
 	<header>
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default" style="background: aliceblue">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -29,14 +29,14 @@
 					<h2>Entry Report Select Form</h2>
 					<p></p>
 					<br> <br> <br>
-					<div class="form-group">
+					<div class="form-group" style="background: aliceblue">
 						<form action="/faculty/entry" method="post">
 							<div class="container">
 								<div class="container">
 									<div class="container">
 										Select an Entry: <select name="entry" class="form-control">
-											<c:forEach items="${eList}" var="entry">
-												<option value="${entry.id}">${entry.startPeriod}</option>
+											<c:forEach items="${entryList}" var="en">
+												<option value="${en.id}">${en.startPeriod}</option>
 											</c:forEach>
 										</select>
 									</div>

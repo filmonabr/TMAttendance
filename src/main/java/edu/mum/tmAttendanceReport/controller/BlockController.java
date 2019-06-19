@@ -57,8 +57,8 @@ public class BlockController {
 	public String searchReport(@RequestParam("course") String  courseCode, @RequestParam("block") String  blockId, RedirectAttributes redirect,
 			                     Model model){
 		
-		System.out.println(courseCode);
-		System.out.println(blockId);
+		//System.out.println(courseCode);
+		//System.out.println(blockId);
 		CourseOffered courseOffered ;
 		Course course = courseService.findById(courseCode);
 		Block block = blockService.findById(Long.parseLong(blockId));
