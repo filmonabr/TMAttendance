@@ -118,7 +118,7 @@
 				<div class="container">
 					<div class="ooter-copyright  py-3 text-white bg-dark">
 						<p class="text-muted">
-							© 2019 Copyright: <a href="#"> tmattendance.mum.edu</a>
+							© 2019 Copyright: <a href="#"> tmattendance.cs.mum.edu</a>
 						</p>
 					</div>
 				</div>

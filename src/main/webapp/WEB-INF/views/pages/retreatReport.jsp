@@ -36,7 +36,7 @@
             <div class="card-body">
             	
                 <div class="form-group">
-                <label for="total">Total Number of Retreats Done:</label>
+                <label for="total">Retreat date: :</label>
                 <label name="total"> ${retreatRecord.numberOfRetreats} </label>
                 </div>
                 
