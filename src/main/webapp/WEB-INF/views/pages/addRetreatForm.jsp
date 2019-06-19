@@ -22,13 +22,13 @@
 			</p>
 			
 			<p>
-				<input type="text" path="retreatDate" class= "date" name = "retreatDate"
-					    pattern="MM-dd-yyyy" />
+				<input type="date" class= "date" name = "retreatDate" />
 			</p>
 			
 			<button type="submit" class="btn btn-info col-2">Save</button>
 						
 		</form>
+
 
 
 </body>

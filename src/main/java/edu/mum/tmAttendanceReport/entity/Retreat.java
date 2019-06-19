@@ -32,7 +32,7 @@ public class Retreat implements Serializable{
 	@JoinColumn(name="student_id")
 	private Student studentid;
 
-	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)//(pattern = "MM-dd-yyyy")
+//	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date retreatDate;
 
 	
