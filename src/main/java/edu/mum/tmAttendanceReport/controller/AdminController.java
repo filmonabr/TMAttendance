@@ -9,6 +9,7 @@ import java.time.LocalDate;
 import java.util.Date;
 
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+import edu.mum.tmAttendanceReport.service.LoadDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
@@ -40,6 +41,9 @@ public class AdminController {
 	@Autowired
 	StudentService studentService;
 
+	@Autowired
+	private LoadDataService loadDataService;
+
 	// GET: Show upload form page.
 	@RequestMapping(value = "/upload")
 	public String uploadForm(@ModelAttribute("fileUploadInfo") FileUploadInfo fileUploadInfo, Model model) {
@@ -53,10 +57,11 @@ public class AdminController {
 	public String uploadFile(Model model,
 			@RequestParam("file") MultipartFile file){
 
-		Path fileNameAndPath = Paths.get(uploadingDir, file.getOriginalFilename());
+
         	try {
-				System.out.println("INSIDE UPLOAD CATCH");
+				Path fileNameAndPath = Paths.get(uploadingDir, file.getOriginalFilename());
 				Files.write(fileNameAndPath, file.getBytes());
+				loadDataService.loadData();
 				return "uploadResult";
 			} catch (IOException e) {
 				//System.out.println("INSIDE UPLOAD CATCH");
