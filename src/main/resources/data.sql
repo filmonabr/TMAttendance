@@ -423,13 +423,23 @@ INSERT INTO `course_offered`(block_id, course_id, faculty_id) VALUES(3, 'CS435',
 
 -- Course offered in each block and students enrolled in the course info
 
-INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987068);
-INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987069);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 986821);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 986813);
 INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987070);
-INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987071);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 986816);
 INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987072);
 INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 109173);
 
+
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(2, 'CS544', 987028);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(2, 'CS544', 987057);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(2, 'CS544', 987065);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(2, 'CS544', 986971);
+
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(3, 'CS435', 987014);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(3, 'CS435', 987008);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(3, 'CS435', 986922);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(3, 'CS435', 986889);
 
 -- TM attendance locations
 INSERT INTO `place`(id, name) VALUES(1, 'DB');
