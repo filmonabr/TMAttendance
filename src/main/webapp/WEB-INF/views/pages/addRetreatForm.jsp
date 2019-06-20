@@ -18,11 +18,11 @@
 		
 			<p>
 			<input type="text" name="studentid"
-					cclass= "date" placeholder="Student Id" />
+					class= "form-control mb-4 col-4" placeholder="Student Id" />
 			</p>
 			
 			<p>
-				<input type="date" class= "date" name = "retreatDate" />
+				<input type="text" class= "form-control mb-4 col-4" name = "retreatNumber" placeholder="Number of retreats" />
 			</p>
 			
 			<button type="submit" class="btn btn-info col-2">Save</button>

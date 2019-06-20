@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix = "c"  uri = "http://java.sun.com/jsp/jstl/core"  %>
+<%@ taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +20,10 @@
           <div class="card rounded-0">
             <div class="card-header">
               <h3 class="mb-0">Update TM Checking Attendance</h3>
+
+              <C:if test = "${result >= 4}" >
+                <p style="color: red">The student have fulfilled the required checking : 4 </p>
+              </C:if>
             </div>
             <div class="card-body">
               <form class="form" action="/admin/check/search" method="post">
