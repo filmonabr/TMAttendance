@@ -4,12 +4,12 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Add Employee Form</title>
+<title>Block Report Form</title>
 <link rel="stylesheet" href="../../../css/main.css">
 </head>
 <body style="background: aliceblue">
 	<header>
-		<nav class="navbar navbar-default " style="background: aliceblue">
+		<nav class="navbar navbar-default " >
 			<div class="container-fluid" >
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">

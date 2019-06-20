@@ -5,7 +5,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Entry report form</title>
+<title>Entry Report Form</title>
+<link rel="stylesheet" href="../../../css/main.css">
 </head>
 <body style="background: aliceblue">
 

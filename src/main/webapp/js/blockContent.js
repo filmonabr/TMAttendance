@@ -4,19 +4,21 @@ $(document).ready(function () {
         let data = JSON.stringify( $("#blocks").val());
 
         $.ajax({
-            url: "http://localhost:9699/student/attendanceReport",
+            url: "http://localhost:2019/student/attendanceReport",
             data: data,
             type: "POST",
             contentType: "application/json",
             dataType: "json",
+
+
             
             success: function(result){
 
                 $("#ajaxId").empty();
-                $("#ajaxId").append('<H3>Sessions: ' + result.sessions+'</H3><p>');
-                $("#ajaxId").append('<H3>Attended: ' + result.attended+'</H3><p>') ;
-                $("#ajaxId").append('<H3>Percentage: ' + result.percentage+'</H3><p>') ;
-                $("#ajaxId").append('<H3>CreditScore: ' + result.creditScore+'</H3><p>').show();
+                $("#ajaxId").append('<p>Sessions: ' + result.sessions+'</p>');
+                $("#ajaxId").append('<p>Attended: ' + result.attended+'</p>') ;
+                $("#ajaxId").append('<p>Percentage: ' + result.percentage+' %</p>') ;
+                $("#ajaxId").append('<p>CreditScore: ' + result.creditScore+'</p>').show();
 
             },
             error: function () {

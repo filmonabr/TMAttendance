@@ -18,7 +18,7 @@
 		<a href="/faculty/entry"><input type="button"
 			value="return to previous" /></a>
 
-		<table class="table">
+		<table class="table" style="background: aliceblue">
 			<thead>
 				<tr>
 					<th>ID</th>
@@ -30,7 +30,7 @@
 					<th></th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody style="background: aliceblue">
 				<c:forEach items="${studententrylist}" var="studEntry">
 					<tr class="active">
 						<td><c:out value="${studEntry.id}" /></td>

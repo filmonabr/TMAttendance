@@ -84,7 +84,7 @@
 
                  <div class="form-group">
                      <c:if test="${param.error}">
-                         <p style="font-size: 20; color: #FF1C19;">Invalid Email or Password</p>
+                         <p style=" color: #FF1C19;">Invalid Email or Password</p>
                      </c:if>
                      <c:if test="${param.logout != null}">
                          <p class="alert alert-success">You have been logged out successfully.</p>

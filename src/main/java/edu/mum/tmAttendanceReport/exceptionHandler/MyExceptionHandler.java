@@ -16,6 +16,24 @@ public class MyExceptionHandler {
 		mav.setViewName("fileNotFound");
 		return mav;
 	}
+
+	@ExceptionHandler(CourseNotOfferedException.class)
+	public ModelAndView handleCourseNotOffered(HttpServletRequest req, CourseNotOfferedException exception) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("message", exception.getFullMessage());
+		mav.setViewName("courseNotOffered");
+		return mav;
+	}
+
+	@ExceptionHandler(Exception.class)
+	public ModelAndView handleAllError(HttpServletRequest req, Exception exception) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("exception", exception);
+		mav.addObject("url", req.getRequestURL());
+		mav.setViewName("error");
+
+		return mav;
+	}
 }
 
 

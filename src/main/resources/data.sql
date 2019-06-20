@@ -120,7 +120,6 @@ INSERT INTO `role` VALUES (3,'ROLE_STUDENT');
 -- User and Role join table
 INSERT INTO `user_role`(user_id, role_id) VALUES (1, 3);
 INSERT INTO `user_role`(user_id, role_id) VALUES (2, 1);
-
 INSERT INTO `user_role`(user_id, role_id) VALUES (3, 1);
 INSERT INTO `user_role`(user_id, role_id) VALUES (4, 2);
 
@@ -410,7 +409,7 @@ INSERT INTO `block`(id, start_date, end_date, period, description) VALUES(2, '20
 INSERT INTO `block`(id, start_date, end_date, period, description) VALUES(3, '2017-02-01', '2017-02-16', 10, 'Feb 2017');
 
 
--- University course catalog 
+-- University course catalog
 INSERT INTO `course`(code, name) VALUES('CS545', 'Web Application Architecture');
 INSERT INTO `course`(code, name) VALUES('CS544', 'Enterprise Architecture');
 INSERT INTO `course`(code, name) VALUES('CS525', 'Advanced Software Development');
@@ -424,10 +423,10 @@ INSERT INTO `course_offered`(block_id, course_id, faculty_id) VALUES(3, 'CS435',
 
 -- Course offered in each block and students enrolled in the course info
 
-INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 986821);
-INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 986813);
-INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987070);
-INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 986816);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 986807);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 986829);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 986832);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 986837);
 INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987072);
 INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987073);
 
@@ -453,7 +452,7 @@ INSERT INTO `place`(id, name) VALUES(3, 'Ladies Palace');
 INSERT INTO `tmcheck`(id, student_id, number_of_checks) VALUES(1, 987073, 2);
 
 -- Students Retreat record
-INSERT INTO `retreat`(id, student_id, retreat_Number) VALUES(1, 987073, 2);
+INSERT INTO `retreat`(id, student_id, retreat_date) VALUES(1, 987073, '2017-02-01');
 
 
 
