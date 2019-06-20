@@ -4,7 +4,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Add Employee Form</title>
+<title>Block Report Form</title>
 <link rel="stylesheet" href="../../../css/main.css">
 </head>
 <body style="background: aliceblue">

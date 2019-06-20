@@ -9,6 +9,6 @@
 </head>
 <body style="background: aliceblue">
       <h1> File uploaded successfully well done!!!!</h1>
-<%--<img src="<spring:url value="/images/uploadsuccessful.jpg" htmlEscape="true"/>"/>--%>
+
 </body>
 </html>

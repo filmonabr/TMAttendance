@@ -3,6 +3,7 @@ package edu.mum.tmAttendanceReport.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.mum.tmAttendanceReport.exceptionHandler.CourseNotOfferedException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +23,8 @@ import edu.mum.tmAttendanceReport.service.BlockService;
 import edu.mum.tmAttendanceReport.service.CourseOfferedService;
 import edu.mum.tmAttendanceReport.service.CourseService;
 import edu.mum.tmAttendanceReport.service.TMAttendanceService;
+
+import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping(value="/faculty")
@@ -55,7 +58,7 @@ public class BlockController {
 
 	@PostMapping(value= "/report/block")
 	public String searchReport(@RequestParam("course") String  courseCode, @RequestParam("block") String  blockId, RedirectAttributes redirect,
-			                     Model model){
+			                     Model model, HttpSession httpSession){
 		
 		//System.out.println(courseCode);
 		//System.out.println(blockId);
@@ -67,12 +70,16 @@ public class BlockController {
 		if(course !=null && block!=null) {
 			model.addAttribute("courseName", course.getName());
 			model.addAttribute("blockDescription", block.getDescription());
-			courseOffered = courseOfferedService.findByCourseAndBlock(course, block);
-			//System.out.println(courseOffered);
-			List<Student> studentList = courseOffered. getStudents();
-			//System.out.println(studentList);
-			List<StudentReport> studentReports = generateResult(studentList, block);
-			model.addAttribute("studentReports",studentReports);
+			try {
+				courseOffered = courseOfferedService.findByCourseAndBlock(course, block);
+				List<Student> studentList = courseOffered. getStudents();
+				List<StudentReport> studentReports = generateResult(studentList, block);
+				model.addAttribute("studentReports",studentReports);
+				httpSession.setAttribute("studentReports",studentReports);
+			}catch (Exception ex){
+				throw new CourseNotOfferedException();
+			}
+
 		}
 		else {
 			return "redirect:/faculty/report/block";
@@ -105,7 +112,7 @@ public class BlockController {
 			List<TMAttendance> studentBlockAttendanceList = tmAttendanceService
 					.findAttendanceByDates(student.getStudentId(), startDate, endDate);
 
-			double percentage = (double) (studentBlockAttendanceList.size() / numberOfDaysInBlock) * 100;
+			long percentage = Math.round (((double) studentBlockAttendanceList.size() / numberOfDaysInBlock) * 100);
 			studentReport.setPercentage(String.valueOf(percentage));
 
 			if (percentage >= 90.0) {

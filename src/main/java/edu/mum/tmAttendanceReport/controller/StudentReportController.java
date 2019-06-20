@@ -144,7 +144,7 @@ public class StudentReportController {
 			
 			
 
-			double percentage = (double) (studentBlockAttendanceList.size() / numberOfDaysInBlock) * 100;
+			long percentage = Math.round(((double) studentBlockAttendanceList.size() / numberOfDaysInBlock) * 100);
 			
 			studentReport.setSessions(String.valueOf(numberOfDaysInBlock)); 
 			studentReport.setAttended(String.valueOf(studentBlockAttendanceList.size()));
