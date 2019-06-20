@@ -33,15 +33,15 @@ public class Retreat implements Serializable{
 	private Student studentid;
 
 //	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private Date retreatDate;
+	private Integer retreatNumber;
 
 	
 	public Retreat() {}
 
-	public Retreat(Long id, Student studentid, Date retreatDate) {
+	public Retreat(Long id, Student studentid, Integer retreaNumber) {
 		this.id = id;
 		this.studentid = studentid;
-		this.retreatDate = retreatDate;
+		this.retreatNumber = retreaNumber;
 	}
 
 	public Long getId() {
@@ -60,17 +60,17 @@ public class Retreat implements Serializable{
 		this.studentid = studentid;
 	}
 
-	public Date getNumberOfRetreats() {
-		return retreatDate;
+	public Integer getRetreatNumber() {
+		return retreatNumber;
 	}
 
-	public void setNumberOfRetreats(Date retreatDate) {
-		this.retreatDate = retreatDate;
+	public void setNumberOfRetreats(Integer retreatDate) {
+		this.retreatNumber = retreatDate;
 	}
 
 	@Override
 	public String toString() {
-		return "Retreat [id=" + id + ", studentid=" + studentid + ", retreatDate=" + retreatDate + "]";
+		return "Retreat [id=" + id + ", studentid=" + studentid + ", retreatNumber=" + retreatNumber + "]";
 	}
 	
 	

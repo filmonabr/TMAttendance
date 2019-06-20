@@ -78,7 +78,7 @@ public class AdminController {
 	
 	@PostMapping(value="/retreat")
 	public String saveRetreat(@ModelAttribute("retreat") Retreat retreat) {
-		//System.out.println(retreat);
+		System.out.println(retreat);
 		Student student = studentService.findById(retreat.getStudentid().getStudentId());
 		retreat.setStudentid(student);
 		Retreat newRetreat = retreatService.save(retreat);
@@ -144,12 +144,16 @@ public class AdminController {
 	public String checkSearch(@RequestParam("studId") long studentId, Model model) {
 		Student stud = studentService.findById(studentId);
 		Check check = checkService.findByStudentid(stud);
-		
-		if(check != null) {
-			model.addAttribute("found", true);
+
+		if(check != null && check.getNumberOfChecks() < 4) {
+				model.addAttribute("found", true);
 		}
-	
+
+		if(check.getNumberOfChecks() >= 4){
+			model.addAttribute("result",check.getNumberOfChecks());
+		}
 		model.addAttribute("updateCheck", check);
+
 		return "updateCheck";
 	}
 	
