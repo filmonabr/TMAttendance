@@ -57,7 +57,7 @@ body {
     /* Set gray background color and 100% height */
     .sidenav {
       padding-top: 20px;
-      //background-color:ghostwhite;
+      background-color:ghostwhite;
       height: 100%;
     }
 
