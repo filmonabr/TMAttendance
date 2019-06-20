@@ -87,7 +87,7 @@ public class EntryController {
 		 
 		 Long size=  (long) tottalSession.size();
 		 studentEntry.setTotalSessionAttended(size);
-		 Double percentage= (size/tottalPossibleSeesion)*100;
+		 double percentage= Math.round((size/tottalPossibleSeesion)*100);
 		 studentEntry.setPercentage(percentage);
 		 
 		 studententrylist.add(studentEntry);
