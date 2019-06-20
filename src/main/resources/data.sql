@@ -452,7 +452,7 @@ INSERT INTO `place`(id, name) VALUES(3, 'Ladies Palace');
 INSERT INTO `tmcheck`(id, student_id, number_of_checks) VALUES(1, 987073, 2);
 
 -- Students Retreat record
-INSERT INTO `retreat`(id, student_id, retreat_date) VALUES(1, 987073, '2017-02-01');
+INSERT INTO `retreat`(id, student_id, retreat_Number) VALUES(1, 987073, 2);
 
 
 

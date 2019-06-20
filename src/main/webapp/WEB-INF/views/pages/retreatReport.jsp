@@ -37,7 +37,7 @@
             	
                 <div class="form-group">
                 <label for="total">Retreat date: :</label>
-                <label name="total"> ${retreatRecord.numberOfRetreats} </label>
+                <label name="total"> ${retreatRecord.retreatNumber} </label>
                 </div>
                 
                <hr>
