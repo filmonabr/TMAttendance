@@ -28,6 +28,10 @@ public class HomeController {
 		
 		User currentUser = userService.findByEmail(user.getName()) ;
 		session.setAttribute("currentUser", currentUser.getEmail());
+
+		int index = currentUser.getEmail().indexOf("@");
+		String username=currentUser.getEmail().substring(0, index);
+		session.setAttribute("username", username);
 		
 		Student currentStudent = studentService.findByUser(currentUser);
 		
